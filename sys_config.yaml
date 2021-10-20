@@ -1,5 +1,5 @@
 server:
-    port: 3000
+    port: 3690
 database:
     port: 3306
     host: 159.75.22.114
