@@ -2,6 +2,7 @@ package gorm
 
 import (
 	"aitao-service/global"
+	"aitao-service/model"
 	"aitao-service/pkg/config"
 	"fmt"
 	"gorm.io/driver/mysql"
@@ -47,7 +48,7 @@ func InitGormDb() {
 // initDataBase 表迁移
 func initDataBase() {
 	var err error
-	err = global.GLOBAL_DB.AutoMigrate()
+	err = global.GLOBAL_DB.AutoMigrate(&model.User{})
 	if err != nil {
 		return
 	}
