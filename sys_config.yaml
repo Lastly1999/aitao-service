@@ -1,14 +1,19 @@
 server:
-    port: 3690
+  port: 3690
 database:
-    port: 3306
-    host: 106.12.161.121
-    db: aitao_shop
-    username: root
-    password: 123456
+  port: 3306
+  host: 106.12.161.121
+  db: aitao_shop
+  username: root
+  password: 123456
 redis:
-    port: 6379
-    host: 159.75.22.114
+  port: 6379
+  host: 159.75.22.114
 wxsdk:
-    appid: wxa8262bc1110c2734
-    appsecret: 5281311ec4ff7676eeec543a71ef747d
+  appid: wxa8262bc1110c2734
+  appsecret: 5281311ec4ff7676eeec543a71ef747d
+taosdk:
+  appkey: 33165142
+  appsecret: 2a9c7cfa23d9e3f5b35088fc390555bb
+  # 物料adzone_id
+  adzoneid: 111740600091

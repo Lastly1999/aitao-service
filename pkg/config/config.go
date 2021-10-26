@@ -28,6 +28,11 @@ type ServerConfig struct {
 		Appid     string `yaml:"appid"`
 		AppSecret string `yaml:"appsecret"`
 	}
+	TaoSdk struct {
+		AppKey    string `yaml:"appkey"`
+		AppSecret string `yaml:"appsecret"`
+		Adzoneid  string `yaml:"adzoneid"`
+	}
 }
 
 func InitServerConfig() {

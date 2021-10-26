@@ -16,6 +16,8 @@ func InitRouter() *gin.Engine {
 	{
 		// 授权模块
 		routes.InitAuthRoutes(apiRouter)
+		// 商品模块
+		routes.InitCommodityRoutes(apiRouter)
 	}
 	return app
 }
