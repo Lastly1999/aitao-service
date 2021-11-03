@@ -31,6 +31,7 @@ type ServerConfig struct {
 	TaoSdk struct {
 		AppKey    string `yaml:"appkey"`
 		AppSecret string `yaml:"appsecret"`
+		Router    string `yaml:"router"`
 		Adzoneid  string `yaml:"adzoneid"`
 	}
 }

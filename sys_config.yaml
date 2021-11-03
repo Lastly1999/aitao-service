@@ -13,6 +13,7 @@ wxsdk:
   appid: wxa8262bc1110c2734
   appsecret: 5281311ec4ff7676eeec543a71ef747d
 taosdk:
+  router: http://gw.api.taobao.com/router/rest
   appkey: 33165142
   appsecret: 2a9c7cfa23d9e3f5b35088fc390555bb
   # 物料adzone_id

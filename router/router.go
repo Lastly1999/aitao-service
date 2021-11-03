@@ -18,6 +18,8 @@ func InitRouter() *gin.Engine {
 		routes.InitAuthRoutes(apiRouter)
 		// 商品模块
 		routes.InitCommodityRoutes(apiRouter)
+		// 物料库分类模块
+		routes.InitMaterialRoutes(apiRouter)
 	}
 	return app
 }

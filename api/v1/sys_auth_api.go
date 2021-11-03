@@ -11,6 +11,10 @@ import (
 type AuthApi struct {
 }
 
+type IAuthApi interface {
+	WxLogin(c *gin.Context)
+}
+
 var authService service.AuthService
 
 // WxLogin 授权登录

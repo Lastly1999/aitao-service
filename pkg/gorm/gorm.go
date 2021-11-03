@@ -48,7 +48,8 @@ func InitGormDb() {
 // initDataBase 表迁移
 func initDataBase() {
 	var err error
-	err = global.GLOBAL_DB.AutoMigrate(&model.User{})
+	// 自动迁移
+	err = global.GLOBAL_DB.AutoMigrate(&model.User{}, &model.SysMaterials{})
 	if err != nil {
 		return
 	}
