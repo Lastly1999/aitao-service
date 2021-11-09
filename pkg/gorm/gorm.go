@@ -22,7 +22,7 @@ func InitGormDb() {
 	var err error
 	mysqlConfig := mysql.Config{
 		DSN:                       dsn,   // DSN data source name
-		DefaultStringSize:         191,   // string 类型字段的默认长度
+		DefaultStringSize:         191,   // string 类 型字段的默认长度
 		DisableDatetimePrecision:  true,  // 禁用 datetime 精度，MySQL 5.6 之前的数据库不支持
 		DontSupportRenameIndex:    true,  // 重命名索引时采用删除并新建的方式，MySQL 5.7 之前的数据库和 MariaDB 不支持重命名索引
 		DontSupportRenameColumn:   true,  // 用 `change` 重命名列，MySQL 8 之前的数据库和 MariaDB 不支持重命名列
@@ -31,7 +31,6 @@ func InitGormDb() {
 	global.GLOBAL_DB, err = gorm.Open(mysql.New(mysqlConfig), &gorm.Config{})
 	if err != nil {
 		panic("The database connection failed may be due to a timeout")
-		return
 	}
 	sqlDB, err := global.GLOBAL_DB.DB()
 	// SetMaxIdleConns 设置空闲连接池中连接的最大数量
@@ -49,7 +48,7 @@ func InitGormDb() {
 func initDataBase() {
 	var err error
 	// 自动迁移
-	err = global.GLOBAL_DB.AutoMigrate(&model.User{}, &model.SysMaterials{})
+	err = global.GLOBAL_DB.AutoMigrate(&model.SysUser{}, &model.SysMaterials{})
 	if err != nil {
 		return
 	}

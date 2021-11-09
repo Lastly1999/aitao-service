@@ -34,7 +34,7 @@ func (commodityService *CommodityService) GetRecommendCommoditys(recommendParams
 	res, err = opentaobao.Execute("taobao.tbk.dg.optimus.material", opentaobao.Parameter{
 		"adzone_id":   config.GLOBAL_CONF.TaoSdk.Adzoneid,
 		"page_size":   recommendParams.PageSize,
-		"page_on":     recommendParams.PageOn,
+		"page_no":     recommendParams.PageOn,
 		"material_id": recommendParams.MaterialId,
 	})
 	if err != nil {
